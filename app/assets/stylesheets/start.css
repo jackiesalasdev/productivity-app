@@ -1,0 +1,91 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: rgb(245, 230, 149);
+  margin-top: 0;
+}
+
+.start-up-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  margin: 0;
+  height: 7vh;
+  width: 100%;
+}
+
+.nav_title {
+  font-family: "Permanent Marker", cursive;
+  color: white;
+  padding-left: 1rem;
+  font-size: 2.5rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.log_in_container {
+  display: flex;
+  margin-right: 1rem;
+}
+
+p {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+
+.log_in_btn {
+  height: 2rem;
+  margin-top: 0.7rem;
+  background-color: rgba(17, 16, 16, 0.527);
+  color: white;
+}
+
+.mega-container {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90vw;
+}
+
+.sign-up-container {
+  height: 15rem;
+  margin-top: 2rem;
+  width: 28rem;
+  height: 40rem;
+  outline: 1px solid black;
+}
+.punch-line-container {
+  height: 15rem;
+  margin-top: 2rem;
+  width: 28rem;
+  height: 40rem;
+  outline: 1px solid black;
+  color: white;
+  font-family: "Permanent Marker", cursive;
+  font-size: 3rem;
+  background-color: black;
+  box-shadow: black 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 50px 40px 10px 0 rgb(12, 12, 12);
+  border: white solid 3px;
+}
+
+.quote {
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
