@@ -1,4 +1,9 @@
- <%= form_with(model: @user) do |form| %>
+ 
+ <div class ="sgnup_whl">
+
+ <div class="sign_up_container">
+ <%= form_with(model: @user, class:'sgnup_form') do |form| %>
+ <h1>Sign Up !</h1>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this @user from being saved:</h2>
@@ -10,22 +15,28 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
-  
+  <div class="sgnup_field">
 
-    <%= form.label :email %>
-    <%= form.email_field :email %>
+   <div class="sgnup_div">
+      <%= form.label :username %>
+      <%= form.text_field :username, class:'sgnup_input' %>
+   </div>
   
-
-    <%= form.label :password %>
-    <%= form.text_field :password %>
+   <div class="sgnup_div">
+      <%= form.label :email %>
+      <%= form.email_field :email, class:'sgnup_input' %>
+   </div>
+   <div class="sgnup_div">
+     <%= form.label :password %>
+     <%= form.text_field :password, class:'sgnup_input'%>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit "sign up" %>
+    <%= form.submit "SIGN UP" ,class:'sgnup_final_btn' %>
   </div>
 
 
 <% end %>
+</div>
+</div>

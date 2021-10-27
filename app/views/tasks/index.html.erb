@@ -1,0 +1,40 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+</style>
+<p id="notice"><%= notice %></p>
+<div class='feed-whole'>
+<%= link_to 'New Task', new_task_path ,class:"newt_button"%>
+
+
+  <div class = "feed-table-container">
+
+    
+      <% @tasks.each do |task| %>
+
+      <div class=feed-card>
+      <div class="card-header"><%= task.user.username %></div>
+      <div class="card-body">
+        <h5 class="card-title"><%= task.title %></h5>
+        <%=render task.categories if task.categories.any? %>
+        <p class="card-text">
+          <%= task.description %>
+        </p>
+        </div>
+    
+        <div class="actions1"> 
+        <%= link_to 'See more |', task ,class:"acts"%>
+        <%= link_to 'Edit |', edit_task_path(task),class:"acts" %>
+        <%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' }, class:"acts"  %>
+      </div>
+      </div>
+
+  
+      <% end %>
+
+    
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,43 @@
+<div class="new_task_whole">
+
+<div class="new_task_container">
+<%= form_with(model: task,class:'new_task_form') do |form| %>
+  <h1>Update</h1>
+  <% if task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+        <% task.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="newt_field">
+    <%= form.label :title, class:'newt_title'%>
+    <%= form.text_field :title, class:'newt_input'%>
+  </div>  
+
+  <div class="newt_field">
+    <%= form.label :description , class:'newt_label_description' %>
+    <%= form.text_area :description, class:'newt_ta'%>
+  </div>
+
+<div class="newt_field">
+<%= form.label :category,'Categories' %>
+<%= form.collection_select(:category, Category.all, :id, :name,
+{prompt: "Select categories below:"}, { multiple: true, size: 3 }) %> 
+</div>
+
+  <div class="actions">
+    <%=form.submit(class:'newt_btn')%>
+    <br>
+  </div>
+  <%= link_to 'Back', tasks_path ,class:"newt_back" %>
+
+<% end %>
+
+</div>
+</div>

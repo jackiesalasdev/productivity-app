@@ -1,0 +1,61 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+</style>
+
+<nav class = "start-up-nav">
+  <h1 class= "nav_title">G O A L S</h1>
+  <div class = "log_in_container">
+     <%= form_with(scope: :session, url: login_path, class:"login_form", local: true) do |f| %>
+        <div>
+          <%= f.label :email %>
+          <div> 
+            <%= f.email_field :email, placeholder: "Enter your email address" , class:"email-input"  %>
+          </div>
+        </div>
+
+        <div >
+          <%= f.label :password %>
+          <div> 
+            <%= f.password_field :password, placeholder: "Enter your password" %>
+          </div>
+        </div>
+
+        <div> 
+          <%= f.submit "Log in" , class:"log_in_btn" %>
+        </div>
+    <% end %>
+
+ </div>
+
+</nav>
+
+
+<div class = "mega-container">
+
+  <div class="content-container">
+
+    <%# <div class ="signup_container">
+    
+    </div> %>
+  
+    
+ 
+    <div class = "punch-line-container">
+    
+      <p class="quote">
+      LOSERS LET  IT HAPPEN; WINNERS MAKE IT HAPPEN!</p>
+     <button class ="sign_up_btn"> <%= link_to  "Sign Up Now!" ,signup_path ,class:"sga"%> </button>
+      
+     
+
+    </div>
+   
+    
+  </div>
+
+
+
+</div>
+
+
